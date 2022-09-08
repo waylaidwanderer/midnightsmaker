@@ -74,7 +74,7 @@
                         <input
                             type="file"
                             accept="image/x-png,image/gif,image/jpeg,image/webp"
-                            class="text-sm mt-1 pr-1 block w-full rounded-md bg-gray-100 border-transparent cursor-pointer
+                            class="text-sm mt-1 pr-1 block w-full rounded-md bg-gray-100 border-transparent cursor-pointer max-w-[250px]
                             focus:border-gray-500 focus:bg-white focus:ring-0 focus:outline-none
                             file:rounded-md file:border file:cursor-pointer file:p-2"
                             @change="onImageChosen"

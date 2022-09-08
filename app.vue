@@ -9,6 +9,14 @@
             <Meta name="twitter:description" content="Create your own Midnights-style album cover."/>
             <Meta property="og:image" content="https://midnightsmaker.com/meta_image.jpg"/>
             <Meta property="twitter:image" content="https://midnightsmaker.com/meta_image.jpg"/>
+            <!-- Favicon -->
+            <Link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+            <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+            <Link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+            <Link rel="manifest" href="/site.webmanifest"/>
+            <Link rel="mask-icon" href="/safari-pinned-tab.svg" color="#62869a"/>
+            <Meta name="msapplication-TileColor" content="#e9e8e4"/>
+            <Meta name="theme-color" content="#e9e8e4"/>
         </Head>
         <div class="text-center">
             <h1 class="pt-3 text-2xl font-bold">Midnights Maker</h1>

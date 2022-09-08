@@ -7,8 +7,8 @@
             <Meta name="description" content="Create your own Midnights-style album cover."/>
             <Meta property="og:description" content="Create your own Midnights-style album cover."/>
             <Meta name="twitter:description" content="Create your own Midnights-style album cover."/>
-            <!--<Meta property="og:image" content="https://midnightsmaker.com/meta_image.jpg"/>
-            <Meta property="twitter:image" content="https://midnightsmaker.com/meta_image.jpg"/>-->
+            <Meta property="og:image" content="https://midnightsmaker.com/meta_image.jpg"/>
+            <Meta property="twitter:image" content="https://midnightsmaker.com/meta_image.jpg"/>
         </Head>
         <div class="text-center">
             <h1 class="pt-3 text-2xl font-bold">Midnights Maker</h1>
@@ -207,7 +207,7 @@
 </template>
 
 <script setup>
-// TODO: favicon, meta image
+// TODO: favicon, darkreader
 import debounce from 'lodash.debounce';
 
 const albumCoverCanvas = ref(null);

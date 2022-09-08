@@ -13,7 +13,7 @@
     "nuxt": "3.0.0-rc.9"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "darkreader": "^4.9.57",
     "lodash.debounce": "^4.0.8"
   }
 }

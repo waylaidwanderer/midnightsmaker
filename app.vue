@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center items-center mt-10 text-xs text-gray-500">
+        <div class="flex flex-col justify-center items-center mt-10 mb-3 text-xs text-gray-500">
             <div>Copyright &copy; 2022 <a href="https://github.com/waylaidwanderer" target="_blank" class="underline">waylaidwanderer</a>. All rights reserved.</div>
             <em>Album design and default image belongs to Taylor Swift.</em>
         </div>

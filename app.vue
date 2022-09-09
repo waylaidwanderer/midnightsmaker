@@ -215,13 +215,19 @@
 </template>
 
 <script setup>
-// TODO: favicon, darkreader
+// TODO: darkreader
 import debounce from 'lodash.debounce';
+
+const debouncedRender = debounce(render, 300);
+const themes = {
+    original: ['#536184', '#62869a', '#88a7bb'],
+};
 
 const albumCoverCanvas = ref(null);
 const supportsClipboardApi = ref(false);
 const copyToClipboardText = ref('Copy to Clipboard');
 const croppedAlbumImage = ref(null);
+const activeThemeName = ref('original');
 
 const albumTitle = ref('Midnights');
 const albumImage = ref('/cover_image.jpg');
@@ -241,7 +247,7 @@ const trackElevenTitle = ref('Track Eleven');
 const trackTwelveTitle = ref('Track Twelve');
 const trackThirteenTitle = ref('Track Thirteen');
 
-const debouncedRender = debounce(render, 300);
+const activeTheme = computed(() => themes[activeThemeName.value]);
 
 watch(albumImage, () => {
     croppedAlbumImage.value = null;
@@ -344,9 +350,9 @@ async function render() {
     ctx.font = '700 78px Roboto';
     // gradient for album title
     const gradient = ctx.createLinearGradient(233, 0, 233 + ctx.measureText(albumTitle.value).width, 0);
-    gradient.addColorStop(0,'#536184');
-    gradient.addColorStop(0.45, '#62869a');
-    gradient.addColorStop(1, '#88a7bb');
+    gradient.addColorStop(0,activeTheme.value[0]);
+    gradient.addColorStop(0.45, activeTheme.value[1]);
+    gradient.addColorStop(1, activeTheme.value[2]);
     ctx.fillStyle = gradient;
     ctx.fillText(albumTitle.value, 233, 190 / 0.8, 737);
 
@@ -354,9 +360,9 @@ async function render() {
     canvas.style.letterSpacing = letterSpacing;
 
     const sideGradient = [
-        { offset: 0, color: '#88a7bb' },
-        { offset: 0.12, color: '#62869a' },
-        { offset: 1, color: '#536184' },
+        { offset: 0, color: activeTheme.value[2] },
+        { offset: 0.12, color: activeTheme.value[1] },
+        { offset: 1, color: activeTheme.value[0] },
     ];
 
     // Side A
@@ -391,7 +397,6 @@ async function render() {
     // album image
     if (!croppedAlbumImage.value) {
         croppedAlbumImage.value = (await crop(albumImage.value, 767 / 727)).toDataURL();
-        console.log('got to here');
     }
     const coverImage = new Image();
     coverImage.onload = () => {

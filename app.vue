@@ -60,6 +60,33 @@
                 </div>
             </div>
             <div class="md:mr-3 mt-5 md:mt-0 mb-5 flex-col">
+                <div class="text-xs mb-5">
+                    <span class="block text-gray-700">Theme</span>
+                    <button
+                        title="Moonstone Blue"
+                        class="inline-block rounded-full h-6 w-6 transition duration-200 mt-1 align-top mr-2 cursor-pointer bg-[#88a7bb]"
+                        :class="{ 'outline outline-2 outline-black': activeThemeName === 'moonstone_blue' }"
+                        @click="activeThemeName = 'moonstone_blue'"
+                    />
+                    <button
+                        title="Jade Green"
+                        class="inline-block rounded-full h-6 w-6 transition duration-200 mt-1 align-top mr-2 cursor-pointer bg-[#87b2a9]"
+                        :class="{ 'outline outline-2 outline-black': activeThemeName === 'jade_green' }"
+                        @click="activeThemeName = 'jade_green'"
+                    />
+                    <button
+                        title="Blood Moon"
+                        class="inline-block rounded-full h-6 w-6 transition duration-200 mt-1 align-top mr-2 cursor-pointer bg-[#ae5d59]"
+                        :class="{ 'outline outline-2 outline-black': activeThemeName === 'blood_moon' }"
+                        @click="activeThemeName = 'blood_moon'"
+                    />
+                    <button
+                        title="Mahogany"
+                        class="inline-block rounded-full h-6 w-6 transition duration-200 mt-1 align-top mr-2 cursor-pointer bg-[#ceaf6e]"
+                        :class="{ 'outline outline-2 outline-black': activeThemeName === 'mahogany' }"
+                        @click="activeThemeName = 'mahogany'"
+                    />
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
                     <label class="block">
                         <span class="text-gray-700">Album Title</span>
@@ -67,7 +94,7 @@
                             type="text"
                             class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                             v-model="albumTitle"
-                        >
+                        />
                     </label>
                     <label class="block">
                         <span class="text-gray-700">Album Image</span>
@@ -78,7 +105,7 @@
                             focus:border-gray-500 focus:bg-white focus:ring-0 focus:outline-none
                             file:rounded-md file:border file:cursor-pointer file:p-2"
                             @change="onImageChosen"
-                        >
+                        />
                     </label>
                     <div>
                         <label class="block">
@@ -87,7 +114,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="sideALabel"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track One</span>
@@ -95,7 +122,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackOneTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Two</span>
@@ -103,7 +130,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackTwoTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Three</span>
@@ -111,7 +138,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackThreeTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Four</span>
@@ -119,7 +146,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackFourTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Five</span>
@@ -127,7 +154,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackFiveTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Six</span>
@@ -135,7 +162,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackSixTitle"
-                            >
+                            />
                         </label>
                     </div>
                     <div>
@@ -145,7 +172,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="sideBLabel"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Seven</span>
@@ -153,7 +180,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackSevenTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Eight</span>
@@ -161,7 +188,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackEightTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Nine</span>
@@ -169,7 +196,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackNineTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Ten</span>
@@ -177,7 +204,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackTenTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Eleven</span>
@@ -185,7 +212,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackElevenTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Twelve</span>
@@ -193,7 +220,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackTwelveTitle"
-                            >
+                            />
                         </label>
                         <label class="block mt-2 ml-4">
                             <span class="text-gray-700">Track Thirteen</span>
@@ -201,7 +228,7 @@
                                 type="text"
                                 class="text-sm mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
                                 v-model="trackThirteenTitle"
-                            >
+                            />
                         </label>
                     </div>
                 </div>
@@ -220,17 +247,20 @@ import debounce from 'lodash.debounce';
 
 const debouncedRender = debounce(render, 300);
 const themes = {
-    original: ['#536184', '#62869a', '#88a7bb'],
+    moonstone_blue: ['#536184', '#62869a', '#88a7bb'],
+    jade_green: ['#4e6861', '#799e98', '#87b2a9'],
+    blood_moon: ['#824e4c', '#9e5653', '#ae5d59'],
+    mahogany: ['#9c7b3d', '#b09254', '#bea162'],
 };
 
 const albumCoverCanvas = ref(null);
 const supportsClipboardApi = ref(false);
 const copyToClipboardText = ref('Copy to Clipboard');
 const croppedAlbumImage = ref(null);
-const activeThemeName = ref('original');
+const activeThemeName = ref('moonstone_blue');
 
 const albumTitle = ref('Midnights');
-const albumImage = ref('/cover_image.jpg');
+const albumImage = ref('/img/cover_image_moonstone_blue.jpg');
 const sideALabel = ref('Side A');
 const sideBLabel = ref('Side B');
 const trackOneTitle = ref('Track One');
@@ -252,6 +282,12 @@ const activeTheme = computed(() => themes[activeThemeName.value]);
 watch(albumImage, () => {
     croppedAlbumImage.value = null;
 });
+watch(activeThemeName, () => {
+    if (!albumImage.value.startsWith('/img/')) {
+        return;
+    }
+    albumImage.value = `/img/cover_image_${activeThemeName.value}.jpg`;
+});
 watch([
     albumTitle,
     albumImage,
@@ -270,6 +306,7 @@ watch([
     trackElevenTitle,
     trackTwelveTitle,
     trackThirteenTitle,
+    activeTheme,
 ], () => {
     debouncedRender();
 });
@@ -341,7 +378,7 @@ async function render() {
     ctx.fillRect(0,0, canvas.width, canvas.height);
 
     // watermark
-    ctx.fillStyle = 'rgba(98, 134, 154, 0.5)';
+    ctx.fillStyle = `${activeTheme.value[1]}6F`;
     ctx.font = '300 16px Roboto';
     ctx.fillText('made with midnightsmaker.com', 10, 24);
 

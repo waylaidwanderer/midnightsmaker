@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78cfed11-acb0-4157-b574-eedc151a3a45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/plugins/darkreader.client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
     </list>
@@ -60,7 +59,8 @@
       <workItem from="1662509633573" duration="1959000" />
       <workItem from="1662529226971" duration="5032000" />
       <workItem from="1662534332024" duration="36792000" />
-      <workItem from="1662694141172" duration="7153000" />
+      <workItem from="1662694141172" duration="7778000" />
+      <workItem from="1663046201621" duration="209000" />
     </task>
     <servers />
   </component>

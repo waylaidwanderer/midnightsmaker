@@ -86,6 +86,12 @@
                         :class="{ 'outline outline-2 outline-black': activeThemeName === 'mahogany' }"
                         @click="activeThemeName = 'mahogany'"
                     />
+                    <button
+                        title="Lavender"
+                        class="inline-block rounded-full h-6 w-6 transition duration-200 mt-1 align-top mr-2 cursor-pointer bg-[#ab9eaf]"
+                        :class="{ 'outline outline-2 outline-black': activeThemeName === 'lavender' }"
+                        @click="activeThemeName = 'lavender'"
+                    />
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
                     <label class="block">
@@ -251,6 +257,7 @@ const themes = {
     jade_green: ['#4e6861', '#799e98', '#87b2a9'],
     blood_moon: ['#824e4c', '#9e5653', '#ae5d59'],
     mahogany: ['#9c7b3d', '#b09254', '#bea162'],
+    lavender: ['#847490', '#988a9f', '#ab9eaf'],
 };
 
 const albumCoverCanvas = ref(null);
@@ -286,7 +293,11 @@ watch(activeThemeName, () => {
     if (!albumImage.value.startsWith('/img/')) {
         return;
     }
-    albumImage.value = `/img/cover_image_${activeThemeName.value}.jpg`;
+    if (activeThemeName.value === 'lavender') {
+        albumImage.value = `/img/cover_image_moonstone_blue.jpg`;
+    } else {
+        albumImage.value = `/img/cover_image_${activeThemeName.value}.jpg`;
+    }
 });
 watch([
     albumTitle,
